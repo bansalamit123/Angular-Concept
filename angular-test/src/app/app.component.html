@@ -1,0 +1,17 @@
+<div>
+    <h1 [innerText]="message"></h1>
+    <img [src]="imageUrl">
+</div>
+
+<div appCustom [appCustomDirectiveInput]="'Hello, Directive!'">
+    <h1>Directive</h1>
+</div>
+
+<h3>{{ 'hello' | uppercase }}</h3>
+<h3>{{ 'WORLD' | lowercase }}</h3>
+<h3>{{ 123.456 | currency: 'USD' }}</h3>
+<h3>{{ currentDate | date: 'short' }}</h3>
+<h3>pipe = {{ someValue | custom: 'abc' : 'xyz' }}</h3>
+<h3>{{ 'Angular' | slice: 0:3 }}</h3>
+<h3>{{ user | json }}</h3>
+<router-outlet></router-outlet>
